@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>User Management System</h1>
+        <p class="subtitle">Flask CRUD REST API</p>
+
+        <!-- Add User -->
+        <div class="card">
+
+            <h2>Add New User</h2>
+
+            <form id="userForm">
+
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+                <button type="submit">
+                    Add User
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Users List -->
+        <div class="card">
+
+            <div class="users-header">
+                <h2>Users</h2>
+
+                <button
+                    type="button"
+                    class="refresh-btn"
+                    onclick="getUsers()">
+                    Refresh
+                </button>
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="usersTable">
+                    <!-- Users will be displayed here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
